@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etAMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:hint="a"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMain" />
+
+    <EditText
+        android:id="@+id/etBMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="9dp"
+        android:ems="10"
+        android:hint="b"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/btnCalcMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAMain" />
+
+    <EditText
+        android:id="@+id/etCMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="c"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etBMain" />
+
+    <ImageView
+        android:id="@+id/ivMain"
+        android:layout_width="192dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="57dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/invisible" />
+
+    <Button
+        android:id="@+id/btnCalcMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:onClick="Calculate"
+        android:text="Calc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etBMain"
+        app:layout_constraintTop_toTopOf="@+id/etBMain" />
+
+    <TextView
+        android:id="@+id/tvX1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="28dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/etCMain"
+        app:layout_constraintTop_toBottomOf="@+id/etCMain"
+        tools:text="x1" />
+
+    <TextView
+        android:id="@+id/tvX2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="57dp"
+        android:text="TextView"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvX1"
+        app:layout_constraintEnd_toEndOf="@+id/btnCalcMain"
+        app:layout_constraintStart_toEndOf="@+id/etCMain"
+        tools:text="x2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
