@@ -45,8 +45,8 @@
 
     <ImageView
         android:id="@+id/ivMain"
-        android:layout_width="192dp"
-        android:layout_height="170dp"
+        android:layout_width="211dp"
+        android:layout_height="188dp"
         android:layout_marginTop="57dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,8 +70,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:layout_marginEnd="28dp"
-        android:text="TextView"
+        android:layout_marginEnd="55dp"
+        android:text="x1"
         app:layout_constraintEnd_toEndOf="@+id/etCMain"
         app:layout_constraintTop_toBottomOf="@+id/etCMain"
         tools:text="x1" />
@@ -81,8 +81,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="58dp"
-        android:layout_marginEnd="57dp"
-        android:text="TextView"
+        android:layout_marginEnd="70dp"
+        android:text="x2"
         app:layout_constraintBaseline_toBaselineOf="@+id/tvX1"
         app:layout_constraintEnd_toEndOf="@+id/btnCalcMain"
         app:layout_constraintStart_toEndOf="@+id/etCMain"

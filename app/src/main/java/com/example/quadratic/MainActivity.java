@@ -2,6 +2,7 @@ package com.example.quadratic;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,49 +38,44 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @SuppressLint("SetTextI18n")
     public void Calculate(View view) {
 
         String A = etA.getText().toString();
         String B = etB.getText().toString();
         String C = etC.getText().toString();
+
+
+        if (A.trim().isEmpty() || B.trim().isEmpty() || C.trim().isEmpty()){
+
+            Toast.makeText(this, "there is an empty field", Toast.LENGTH_LONG).show();
+        }
+
         double a = Double.parseDouble(A);
         double b = Double.parseDouble(B);
         double c = Double.parseDouble(C);
+        double d = ((b*b)-(4*a*c));
 
-        if (A.trim().isEmpty()){
-
-            Toast.makeText(this, "there is an empty field", Toast.LENGTH_LONG).show();
-        }
-
-        if (B.trim().isEmpty()){
-
-            Toast.makeText(this, "there is an empty field", Toast.LENGTH_LONG).show();
-        }
-
-        if (C.trim().isEmpty()){
-
-            Toast.makeText(this, "there is an empty field", Toast.LENGTH_LONG).show();
-        }
-
-        double d = (b*b-4*a*c);
-        double eq1 = ((-b + Math.sqrt(d)) / (2*a));
-        double eq2 = ((-b - Math.sqrt(d)) / (2*a));
 
 
         if (d > 0){
-            img.setImageResource(R.drawable.two);
+            img.setImageResource(R.drawable.imgtwo);
+            x1.setText("x1 = " + ((-b + Math.sqrt(d)) / (2*a)));
+            x2.setText("x2 = " + ((-b - Math.sqrt(d)) / (2*a)));
         }
 
         if (d == 0){
-            img.setImageResource(R.drawable.one);
+            img.setImageResource(R.drawable.imgone);
+            x1.setText("x1 = " + ((-b + Math.sqrt(d)) / (2*a)));
+
         }
 
         if (d < 0){
-            img.setImageResource(R.drawable.zero);
+            img.setImageResource(R.drawable.imgzero);
         }
 
-        x1.setText("" + eq1);
-        x2.setText("" + eq2);
+
+
 
 
 
